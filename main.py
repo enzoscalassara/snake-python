@@ -54,13 +54,10 @@ while not game_over:
             snake.snake_head.ycor() < -280:
         game_over = True
 
-
-
 #   Detects collision with body.
     for squares in snake.snake_body[2:]:
         if snake.snake_head.distance(squares) < 10:
             game_over = True
-
 
     if game_over:
         game_over_text = Turtle()
@@ -68,12 +65,6 @@ while not game_over:
         game_over_text.hideturtle()
         game_over_text.color("Red")
         game_over_text.write('GAME OVER', align='center', font=('Arial', 18, 'normal'))
-
-
-
-
-
-
 
 
 screen.exitonclick()
